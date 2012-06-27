@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csproj", "{56406915-62B7-4FF3-B5BE-9AD93A0FD2C8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4212B22A-431D-4391-BBDA-1A98A0556686}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		LSP_ThirdWheel.vsmdi = LSP_ThirdWheel.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "VisualBasic", "VisualBasic\VisualBasic.vbproj", "{93FDC0C7-FA8F-4AA3-B14C-0A33C47A0600}"
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = LSP_ThirdWheel.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56406915-62B7-4FF3-B5BE-9AD93A0FD2C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56406915-62B7-4FF3-B5BE-9AD93A0FD2C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56406915-62B7-4FF3-B5BE-9AD93A0FD2C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56406915-62B7-4FF3-B5BE-9AD93A0FD2C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93FDC0C7-FA8F-4AA3-B14C-0A33C47A0600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93FDC0C7-FA8F-4AA3-B14C-0A33C47A0600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93FDC0C7-FA8F-4AA3-B14C-0A33C47A0600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93FDC0C7-FA8F-4AA3-B14C-0A33C47A0600}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
