@@ -16,15 +16,15 @@
     {
         <table>
             <thead></thead>
+            <tbody>
             @using (collection.BeginForEach())
             {
-                <tbody>
-                    <tr>
-                        <td>@collection.TextBoxFor(m => m.Title)</td>
-                        <td>@collection.RemoveButton()</td>
-                    </tr>
-                </tbody>
+                <tr>
+                    <td>@collection.TextBoxFor(m => m.Title)</td>
+                    <td>@collection.RemoveButton()</td>
+                </tr>
             }
+            </tbody>
         </table>
         @collection.AddButton()
     }
