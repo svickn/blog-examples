@@ -1,0 +1,59 @@
+﻿@using MVCKnockoutForChildCollections.Extensions
+@model MVCKnockoutForChildCollections.Models.TaskList
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(m => m.Title)
+    @Html.TextBoxFor(m => m.Title)
+
+    <h5>Tasks</h5>
+    using (var collection = @Html.GetKnockoutCollection(m => m.Tasks))
+    {
+        <table>
+            <thead></thead>
+            @using (collection.BeginForEach())
+            {
+                <tbody>
+                    <tr>
+                        <td>@collection.TextBoxFor(m => m.Title)</td>
+                        <td>@collection.RemoveButton()</td>
+                    </tr>
+                </tbody>
+            }
+        </table>
+        @collection.AddButton()
+    }
+    <button>Submit</button>
+}
+
+@section scripts
+{
+    <script src="~/Scripts/knockout-2.1.0.js" type="text/javascript"></script>
+    <script src="~/Scripts/knockout.mapping-latest.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            var taskItem = function(title) {
+                var self = this;
+
+                self.Title = ko.observable(title);
+            };
+            
+            var model = ko.mapping.fromJS(@Html.Raw(Model.ToJson()));
+
+            model.addTasks = function() {
+                model.Tasks.push(new taskItem());
+            };
+
+            model.removeTasks = function(task) {
+                model.Tasks.remove(task);
+            };
+
+            ko.applyBindings(model);
+        })
+    </script>
+}
